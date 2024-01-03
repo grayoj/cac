@@ -6,8 +6,8 @@ import {
   HomeIcon,
   InboxIcon,
   UsersIcon,
-  XIcon,
-} from '@heroicons/react/outline';
+  XMarkIcon,
+} from '@heroicons/react/16/solid';
 
 const navigation = [
   { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
@@ -52,7 +52,7 @@ export default function Sidebar() {
             leaveFrom='translate-x-0'
             leaveTo='-translate-x-full'
           >
-            <div className='relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-white border'>
+            <div className='relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-white border-r'>
               <Transition.Child
                 as={Fragment}
                 enter='ease-in-out duration-300'
@@ -69,7 +69,10 @@ export default function Sidebar() {
                     onClick={() => setSidebarOpen(false)}
                   >
                     <span className='sr-only'>Close sidebar</span>
-                    <XIcon className='h-6 w-6 text-white' aria-hidden='true' />
+                    <XMarkIcon
+                      className='h-6 w-6 text-white'
+                      aria-hidden='true'
+                    />
                   </button>
                 </div>
               </Transition.Child>
@@ -83,9 +86,7 @@ export default function Sidebar() {
                       key={item.name}
                       href={item.href}
                       className={classNames(
-                        item.current
-                          ? 'bg-white border text-black'
-                          : 'text-black',
+                        item.current ? 'bg-white text-black' : 'text-black',
                         'group flex items-center px-2 py-2 text-base font-medium rounded-md'
                       )}
                     >
@@ -105,7 +106,7 @@ export default function Sidebar() {
       </Transition.Root>
 
       <div className='hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0'>
-        <div className='flex flex-col flex-grow pt-5 bg-white overflow-y-auto'>
+        <div className='flex flex-col flex-grow pt-5 bg-white overflow-y-auto border-r'>
           <div className='flex items-center flex-shrink-0 px-4'>
             <img className='h-8 w-auto' src='/logo.png' alt='Workflow' />
           </div>
@@ -116,7 +117,7 @@ export default function Sidebar() {
                   key={item.name}
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-white border text-black' : 'text-black',
+                    item.current ? 'bg-white text-black' : 'text-black',
                     'group flex items-center px-2 py-2 text-sm font-medium rounded-md'
                   )}
                 >
