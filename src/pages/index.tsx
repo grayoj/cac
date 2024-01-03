@@ -1,17 +1,16 @@
-import Navbar from '@suburban/components/Navbar';
-import Sidebar from '@suburban/components/Sidebar';
-import ApplicationsTable from '@suburban/components/Tables/ApplicationsTable';
-import AppointmentsTable from '@suburban/components/Tables/AppointmentsTable';
+import Navbar from "@suburban/components/Navbar";
+import ProfileHeader from "@suburban/components/ProfileHeader";
+import Sidebar from "@suburban/components/Sidebar";
 
 export default function Home() {
   return (
     <>
       <div>
         <Sidebar />
-        <div className='md:pl-64 flex flex-col flex-1'>
+        <div className="md:pl-64 flex flex-col flex-1">
           <Navbar />
           <main>
-            <AppointmentsTable />
+            <ProfileHeader />
           </main>
         </div>
       </div>

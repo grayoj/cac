@@ -16,7 +16,7 @@ function classNames(...classes: string[]) {
 }
 
 export default function Navbar() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [setSidebarOpen] = useState(false);
   return (
     <div className="sticky top-0 z-10 flex-shrink-0 flex h-16 bg-white border-b">
       <button
@@ -62,7 +62,7 @@ export default function Navbar() {
                 <span className="sr-only">Open user menu</span>
                 <img
                   className="h-8 w-8 rounded-full"
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  src="/Profile.png"
                   alt=""
                 />
               </Menu.Button>
