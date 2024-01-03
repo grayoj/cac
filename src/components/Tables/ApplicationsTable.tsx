@@ -9,7 +9,7 @@ const people = [
 
 export default function ApplicationsTable() {
   return (
-    <div className='px-4 sm:px-6 lg:px-8'>
+    <div className='px-4 sm:px-6 lg:px-8 my-10'>
       <div className='sm:flex sm:items-center'>
         <div className='sm:flex-auto'>
           <h1 className='text-xl font-semibold text-gray-900'>
@@ -23,7 +23,7 @@ export default function ApplicationsTable() {
       <div className='mt-8 flex flex-col'>
         <div className='-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8'>
           <div className='inline-block min-w-full py-2 align-middle md:px-6 lg:px-8'>
-            <div className='overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg'>
+            <div className='overflow-hidden border rounded-sm'>
               <table className='min-w-full divide-y divide-gray-300'>
                 <thead className='bg-gray-50'>
                   <tr>
@@ -51,12 +51,6 @@ export default function ApplicationsTable() {
                     >
                       Role
                     </th>
-                    <th
-                      scope='col'
-                      className='relative py-3.5 pl-3 pr-4 sm:pr-6'
-                    >
-                      <span className='sr-only'>Edit</span>
-                    </th>
                   </tr>
                 </thead>
                 <tbody className='divide-y divide-gray-200 bg-white'>
@@ -73,14 +67,6 @@ export default function ApplicationsTable() {
                       </td>
                       <td className='whitespace-nowrap px-3 py-4 text-sm text-gray-500'>
                         {person.role}
-                      </td>
-                      <td className='relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6'>
-                        <a
-                          href='#'
-                          className='text-indigo-600 hover:text-indigo-900'
-                        >
-                          Edit<span className='sr-only'>, {person.name}</span>
-                        </a>
                       </td>
                     </tr>
                   ))}
